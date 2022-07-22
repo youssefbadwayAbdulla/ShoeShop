@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+<variable
+    name="DetailsViewModel"
+    type="com.example.shoeshop.domain.model.DetailsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".presentation.login.LoginFragment">
+
+        <TextView
+            android:textSize="@dimen/_18ssp"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="@string/name" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:hint="name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:text="@{DetailsViewModel.shoeName}"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <TextView
+
+            android:textSize="@dimen/_18ssp"
+
+            android:id="@+id/tv_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="Company" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_company"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:hint="@string/company"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:text="@{DetailsViewModel.shoeCompany}"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:textSize="@dimen/_18ssp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="@string/size" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_size"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Size"
+                android:text="@{DetailsViewModel.shoeSize}"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:textSize="@dimen/_18ssp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="@string/description" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:hint="@string/desc"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{DetailsViewModel.shoeDescription}"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="@dimen/_10sdp"
+            android:text="@string/add"
+            android:id="@+id/add"
+            android:textSize="@dimen/_18ssp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </LinearLayout>
+</layout>
