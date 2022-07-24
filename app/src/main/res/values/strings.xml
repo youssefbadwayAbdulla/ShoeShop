@@ -20,4 +20,6 @@
     <string name="desc">Description</string>
     <string name="shoeSize"> %.1f</string>
     <string name="name">Name</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="cancel">Cancel</string>
 </resources>

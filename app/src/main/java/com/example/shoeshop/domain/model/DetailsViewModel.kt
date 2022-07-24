@@ -8,6 +8,8 @@ class DetailsViewModel : ViewModel() {
     val shoeCompany = MutableLiveData<String>()
     val shoeDescription = MutableLiveData<String>()
     val shoeSize = MutableLiveData<String>()
+
+
     fun makeShoe(): ShoeModel {
         return ShoeModel(
             shoeName.value ?: "",

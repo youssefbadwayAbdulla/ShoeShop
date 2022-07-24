@@ -6,9 +6,8 @@
     <data>
 
     </data>
-
+<!--    is a view group that aligns all children in a single direction, vertically or horizontally.-->
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"

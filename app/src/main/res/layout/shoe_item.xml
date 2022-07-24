@@ -10,12 +10,12 @@
     </data>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
         android:id="@+id/card_item_shoe"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="@dimen/_5sdp"
         app:cardCornerRadius="@dimen/_15sdp">
-
+        <!--    is a view group that aligns all children in a single direction, vertically or horizontally.-->
         <LinearLayout
 
             android:layout_width="@dimen/_300sdp"
@@ -40,8 +40,7 @@
                     android:layout_width="@dimen/_200sdp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_80sdp"
-                    android:hint="Shoe Name"
-
+                    android:hint="@string/shoe_name"
                     android:text="@{shoe_item.name}"
                     android:textStyle="bold" />
             </LinearLayout>

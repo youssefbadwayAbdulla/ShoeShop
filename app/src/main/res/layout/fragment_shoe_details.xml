@@ -8,7 +8,7 @@
     name="DetailsViewModel"
     type="com.example.shoeshop.domain.model.DetailsViewModel" />
     </data>
-
+    <!--    is a view group that aligns all children in a single direction, vertically or horizontally.-->
     <LinearLayout
         android:gravity="center"
         android:layout_width="match_parent"
@@ -104,15 +104,38 @@
                 android:text="@{DetailsViewModel.shoeDescription}"
                 />
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.button.MaterialButton
-            app:cornerRadius="@dimen/_10sdp"
-            android:text="@string/add"
-            android:id="@+id/add"
-            android:textSize="@dimen/_18ssp"
-            android:textAllCaps="false"
+        <LinearLayout
+            android:layout_gravity="center"
+
+            android:weightSum="2"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_margin="@dimen/_10sdp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:layout_gravity="center_horizontal"
+                app:cornerRadius="@dimen/_10sdp"
+                android:text="@string/add"
+                android:id="@+id/add"
+                android:layout_weight="1"
+                android:textSize="@dimen/_18ssp"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                app:cornerRadius="@dimen/_10sdp"
+                android:text="@string/cancel"
+                android:id="@+id/Cancel"
+                android:textSize="@dimen/_18ssp"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
 
 
 

@@ -39,8 +39,9 @@ class ShoeDetailsFragment : Fragment() {
             val createNewShoe = detailsViewModel.makeShoe()
             shoeListViewModel.addItemShoe(createNewShoe)
             findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsFragmentToShoeListingFragment())
-
-
+        }
+        binding.Cancel.setOnClickListener {
+            findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsFragmentToShoeListingFragment())
         }
     }
 

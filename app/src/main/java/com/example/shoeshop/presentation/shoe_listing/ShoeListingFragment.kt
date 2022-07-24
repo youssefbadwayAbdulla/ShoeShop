@@ -23,6 +23,7 @@ class ShoeListingFragment : Fragment() {
         // Inflate the layout for this fragment
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_listing, container, false)
+      setHasOptionsMenu(true)
         binding.lifecycleOwner = this
         binding.shoeListViewModel = shoeListViewModel
         shoeListViewModel.shoeList.observe(viewLifecycleOwner, Observer {
@@ -39,10 +40,12 @@ class ShoeListingFragment : Fragment() {
         }
         return binding.root
     }
+    @Deprecated("Deprecated in Java")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.logout, menu)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         findNavController().navigate(ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailsFragment())
         return true
